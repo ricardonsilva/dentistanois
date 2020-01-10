@@ -1,0 +1,30 @@
+.demo-tab-group {
+    border: 1px solid #e8e8e8;
+  }
+  
+  .demo-tab-content {
+    padding: 16px;
+  }
+
+  table {
+    width: 80%;
+  
+    background-color: #3F51B5;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  td  {
+  
+    border: 1px solid #3F51B5;
+    
+    border-collapse: collapse;
+    padding: 5px;
+  }
+
+  table tr:nth-child(odd) {
+    width: 25%;
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }

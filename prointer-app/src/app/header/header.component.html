@@ -1,0 +1,16 @@
+<mat-toolbar class="mat-elevation-z4" color="primary" role="header">
+  <div class="core-header-logo" *ngIf="!isAuthenticated()">
+    <span>
+      Bem-vindo à Clinica Bem Estar
+    </span>
+  </div>
+
+  <div class="core-header-logo" *ngIf="isAuthenticated()">
+
+    <span>
+      Clinica Bem Estar
+    </span>
+
+    <button mat-raised-button class="button-sec" (click)="logout()">Sair</button>
+  </div>
+</mat-toolbar>

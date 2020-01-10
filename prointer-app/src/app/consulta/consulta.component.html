@@ -1,0 +1,20 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Data"  id="dataconsulta" name="dataconsulta" [(ngModel)]="consulta.dataconsulta">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Hora"  id="hora" name="hora" [(ngModel)]="consulta.hora">
+  </mat-form-field>
+   
+  <mat-form-field>
+    <mat-select placeholder="Médico" [(ngModel)]="consulta.medico" name="medico">
+      <mat-option *ngFor="let medico of medicos" [value]="medico">
+        {{medico.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+ <br />
+  <button mat-raised-button color="primary" (click)="cadConsulta()">Cadastrar</button>
+</form>

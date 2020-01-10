@@ -1,0 +1,55 @@
+<div class="col-md-6">
+  <h2>Consultas</h2>
+</div>
+<mat-card>
+  <mat-card-content>
+    <mat-tab-group class="demo-tab-group">
+      <mat-tab label="Cadastro Médicos">
+        <div class="demo-tab-content">
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Especialidade</th>           
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let medico of medicos">
+                <td>{{medico.id}}</td>
+                <td>{{medico.nome}}</td>
+                <td>{{medico.especialidade}}</td>
+                </tr>
+            </tbody>
+          </table>
+          <br />
+          <button mat-raised-button color="primary" (click)="cadMedico()">Novo Médico</button>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Todas Consultas">
+          <div class="demo-tab-content">
+        <table class="table table-striped">
+          <thead>
+              <tr>
+              <th>Id</th>
+              <th>Paciente</th>
+              <th>Medico</th>     
+              <th>Data</th>           
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let consulta of consultas">
+              <td>{{consulta.id}}</td>
+              <td>{{consulta.paciente.email}}</td>
+              <td>{{consulta.medico.nome}}</td>
+              <td>{{consulta.dataconsulta}}</td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+

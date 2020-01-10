@@ -1,0 +1,23 @@
+<!--mat-toolbar color="primary">
+  <span>Login</span>
+</mat-toolbar-->
+<mat-card>
+  <form class="login-form">
+    <mat-form-field class="login-full-width">
+      <input matInput type="email" autofocus id="email" name="email" placeholder="Email" [(ngModel)]="credenciais.email" />
+    </mat-form-field>
+
+    <mat-form-field class="login-full-width">
+      <input matInput type="password" autofocus id="pwd" name="passowrd" placeholder="Senha" [(ngModel)]="credenciais.password">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+    <br/>
+    <br/>
+
+    <button mat-raised-button color="primary" (click)="cadastroHome()">CADASTRAR PACIENTE</button>
+    <br/>
+    <br/>
+    
+  </form>
+</mat-card>
