@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "b8914eed-40a0-4900-81dc-a99e310d4976",
+		"name": "DENTISTA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DENTE",
+			"item": [
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 779eb882-3dde-4dd3-8d9b-327887eb9781",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomedente\": \"molar\",\n\t\"numerodente\": 1,\n\t\"usuariocadastrou\":{\n\t\t\"id\":1\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCHALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 779eb882-3dde-4dd3-8d9b-327887eb9781",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomedente\": \"pré-molar\",\n\t\"numerodente\": 3,\n\t\"usuariocadastrou\":{\n\t\t\"id\":1\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dente/searchAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dente",
+								"searchAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH/{ID}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 779eb882-3dde-4dd3-8d9b-327887eb9781",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomedente\": \"pré-molar\",\n\t\"numerodente\": 3,\n\t\"usuariocadastrou\":{\n\t\t\"id\":1\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DISAB LE/{ID}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 779eb882-3dde-4dd3-8d9b-327887eb9781",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"enable\":false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dente/disable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dente",
+								"disable"
+							]
+						},
+						"description": "HABILITA OU DESABILITA DENTE"
+					},
+					"response": []
+				},
+				{
+					"name": "ENABLE{TRUE/FALSE}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 779eb882-3dde-4dd3-8d9b-327887eb9781",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"enable\":false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/dente/enable/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"dente",
+								"enable",
+								"1"
+							]
+						},
+						"description": "traz os dentes habilitados/desabilitados"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTENTICAÇÃO",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "m4st3rl0ck-S3cr3t",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "masterlock-app",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "$2y$12$hermxhbm61XAP/2FzSPgxeoulUQ7zxH.yoqFdYAz1j3Ml4xu7b5We",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "masterlock-app",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "joselito",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
